@@ -44,7 +44,7 @@ export function printHtmlTree(
   indent = ""
 ): string {
   if (!node.children && node.topic) {
-    return `${indent}└── <a href="/topic/${node.topic}">${node.topic}</a>\n`;
+    return `${indent}└── <a href="/hwb/topic/${node.topic}">${node.topic}</a>\n`;
   }
   if (!node.children && !node.topic) {
     return ``;
@@ -56,7 +56,7 @@ export function printHtmlTree(
 
     if (val.topic) {
       const selectedClass = val.topic === currentTopic ? "topic-selected" : "";
-      result += `${indent}${sign} <a href="/topic/${val.topic}" class="${selectedClass}">${key}</a>\n`;
+      result += `${indent}${sign} <a href="/hwb/topic/${val.topic}" class="${selectedClass}">${key}</a>\n`;
     } else {
       result += `${indent}${sign} ${key}\n`;
     }
